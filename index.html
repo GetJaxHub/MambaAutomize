@@ -4,45 +4,92 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mamba Automize</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
     body {
       background-color: #1e1e1e;
       color: white;
-      font-family: Arial, sans-serif;
+      font-family: 'Inter', sans-serif;
       margin: 0;
       padding: 0;
     }
     header {
       text-align: center;
-      padding: 20px;
-      font-size: 2rem;
+      padding: 60px 20px;
+      font-size: 4rem;
+      font-weight: 600;
+      color: #00aaff;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    nav {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-size: 1.2rem;
+      font-weight: 400;
+      transition: color 0.3s ease-in-out;
+    }
+    nav a:hover {
       color: #00aaff;
     }
     section {
       max-width: 900px;
       margin: auto;
-      padding: 20px;
+      padding: 20px 40px;
+      line-height: 1.8;
     }
     h2 {
       color: #00aaff;
+      font-size: 2rem;
+      margin-bottom: 10px;
     }
     p {
-      line-height: 1.6;
+      font-size: 1.1rem;
+      font-weight: 300;
+      margin-bottom: 20px;
     }
     .btn {
       background-color: #00aaff;
       color: white;
-      padding: 10px 20px;
+      padding: 12px 30px;
       text-decoration: none;
-      border-radius: 5px;
+      border-radius: 8px;
       display: inline-block;
       margin-top: 20px;
+      transition: all 0.3s ease-in-out;
+    }
+    .btn:hover {
+      background-color: #008ecc;
     }
     footer {
       text-align: center;
-      padding: 20px;
+      padding: 40px 20px;
       font-size: 0.9rem;
       color: grey;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    input, textarea {
+      padding: 10px;
+      font-size: 1rem;
+      background-color: #333;
+      color: white;
+      border: 1px solid #555;
+      border-radius: 5px;
+    }
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #00aaff;
     }
   </style>
 </head>
@@ -51,17 +98,37 @@
     Mamba Automize
   </header>
 
-  <section>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#solutions">Solutions</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
     <h2>About Us</h2>
     <p>Mamba Automize is a cutting-edge automation company focused on streamlining business processes through advanced technology and innovation. We specialize in process optimization, AI solutions, and custom automation tools to help businesses achieve efficiency and scalability.</p>
+  </section>
 
+  <section id="services">
     <h2>Our Services</h2>
     <p>We offer a range of services from software automation, workflow optimization, and AI-driven data analysis. Our goal is to help businesses save time, reduce costs, and increase productivity.</p>
+  </section>
 
-    <h2>Why Choose Us?</h2>
-    <p>With a passionate team of experts and a commitment to innovation, we deliver high-quality solutions that adapt to your business needs. Join us in revolutionizing the future of automation.</p>
+  <section id="solutions">
+    <h2>Discover Our Business Solutions</h2>
+    <p>Our tailored solutions are designed to meet the unique needs of each client. From robotic process automation to intelligent data management, we help businesses transform and thrive in the digital age.</p>
+  </section>
 
-    <a href="#contact" class="btn">Contact Us</a>
+  <section id="contact">
+    <h2>Get in Touch</h2>
+    <p>Contact us to explore how we can automate your business processes and drive success.</p>
+    <form action="mailto:contact@mambaautomize.com" method="POST" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
   </section>
 
   <footer>
